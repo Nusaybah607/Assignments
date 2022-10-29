@@ -1,0 +1,112 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header ">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#"> Home </a> </li>
+                    <li><a href="#"> About Me </a> </li>
+                    <li><a href="#"> Contact </a> </li>
+                    <li><a href="#"> Services </a> </li>
+                    <li><a href="#"> Project </a> </li>
+                </ul>
+                        </nav>
+                        <div class="header-text">
+                            <p> Frontend developer</p>
+                            <h1>Hi, I'm <span>Nusaybah</span> <br>Ganiyu-Abideen from Nigeria</h1>
+                        </div>
+        </div>
+
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+            <div class="about-col-1">
+                <img src="images/background.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil quis assumenda fugit temporibus eligendi distinctio rem, mollitia alias ea dolorem illum et atque aliquid sed minima laborum repellendus doloribus minus.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Hobbies')">Hobbies </p>
+                    <p class="tab-links" onclick="opentab('Priorities')">Priorities</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Frontend developer</span><br>Designing Web/App interface</li>
+                        <li><span>web development</span><br>web development</li>
+                        <li><span>Frontend developer</span><br>Designing Web/App interface</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="hobbies">
+                    <ul>
+                        <li><span>Frontend developer</span><br>Designing Web/App interface</li>
+                        <li><span>web development</span><br>web development</li>
+                        <li><span>Frontend developer</span><br>Designing Web/App interface</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="priorities">
+                    <ul>
+                        <li><span>Frontend developer</span><br>Designing Web/App interface</li>
+                        <li><span>web development</span><br>web development</li>
+                        <li><span>Frontend developer</span><br>Designing Web/App interface</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title"> My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quidem reiciendis eveniet dolorem ratione deserunt quibusdam odio earum excepturi fugiat voluptates. Sapiente neque facere impedit delectus, assumenda repellendus quae.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Web Engineering</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quidem reiciendis eveniet dolorem ratione deserunt quibusdam odio earum excepturi fugiat voluptates. Sapiente neque facere impedit delectus, assumenda repellendus quae.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Web Development</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quidem reiciendis eveniet dolorem ratione deserunt quibusdam odio earum excepturi fugiat voluptates. Sapiente neque facere impedit delectus, assumenda repellendus quae.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
