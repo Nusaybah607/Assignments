@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a42e6b8119.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header ">
         <div class="container">
             <nav>
-                <img src="images/logo.jpg" class="logo">
+                <img src="images/design1.jpg" class="logo">
                 <ul>
                     <li><a href="#"> Home </a> </li>
                     <li><a href="#"> About Me </a> </li>
@@ -39,9 +40,9 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil quis assumenda fugit temporibus eligendi distinctio rem, mollitia alias ea dolorem illum et atque aliquid sed minima laborum repellendus doloribus minus.
                 </p>
                 <div class="tab-titles">
-                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('Hobbies')">Hobbies </p>
-                    <p class="tab-links" onclick="opentab('Priorities')">Priorities</p>
+                     <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience </p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
@@ -50,17 +51,17 @@
                         <li><span>Frontend developer</span><br>Designing Web/App interface</li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="hobbies">
+                <div class="tab-contents" id="experience">
                     <ul>
                         <li><span>Frontend developer</span><br>Designing Web/App interface</li>
                         <li><span>web development</span><br>web development</li>
                         <li><span>Frontend developer</span><br>Designing Web/App interface</li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="priorities">
+                <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>Frontend developer</span><br>Designing Web/App interface</li>
-                        <li><span>web development</span><br>web development</li>
+                        <li><span>2018 till date</span><br>Pharmacy</li>
+                        <li><span>web development</span><br>A Frontend student of Altschool</li>
                         <li><span>Frontend developer</span><br>Designing Web/App interface</li>
                     </ul>
                 </div>
@@ -72,24 +73,44 @@
     <div id="services">
         <div class="container">
             <h1 class="sub-title"> My Services</h1>
-            <div class="services-list">
+            <div class=" services-list">
                 <div>
+                    <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quidem reiciendis eveniet dolorem ratione deserunt quibusdam odio earum excepturi fugiat voluptates. Sapiente neque facere impedit delectus, assumenda repellendus quae.
                     </p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
+                    <i class="fa-sharp fa-solid fa-crop-simple"></i>
                     <h2>Web Engineering</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quidem reiciendis eveniet dolorem ratione deserunt quibusdam odio earum excepturi fugiat voluptates. Sapiente neque facere impedit delectus, assumenda repellendus quae.
                     </p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
+                    <i class="fa-brands fa-app-store"></i>
                     <h2>Web Development</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quidem reiciendis eveniet dolorem ratione deserunt quibusdam odio earum excepturi fugiat voluptates. Sapiente neque facere impedit delectus, assumenda repellendus quae.
                     </p>
                     <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/pimg1.webp ">
+                </div>
+                <div class="work">
+                    <img src="images/pimg1.webp ">
+                </div>
+                <div class="work">
+                    <img src="images/pimg1.webp ">
                 </div>
             </div>
         </div>
@@ -104,6 +125,7 @@
             for(tabcontent of tabcontents){
                 tabcontent.classList.remove("active-tab");
             }
+
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
